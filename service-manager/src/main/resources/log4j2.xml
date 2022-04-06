@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2016 Aurionpro Solutions Inc.
+  -->
+<Configuration status="WARN" default="TRACE">
+    <DynamicThresholdFilter key="logLevel" defaultThreshold="ERROR"
+                            onMatch="ACCEPT" onMismatch="NEUTRAL">
+        <KeyValuePair key="debug" value="DEBUG"/>
+        <KeyValuePair key="trace" value="TRACE"/>
+        <KeyValuePair key="info" value="INFO"/>
+        <KeyValuePair key="warn" value="WARN"/>
+        <KeyValuePair key="error" value="ERROR"/>
+    </DynamicThresholdFilter>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5level] [%X{requestId}] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1}.%M() - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="@@log.level@@" additivity="false">
+            <AppenderRef ref="console"/>
+        </Root>
+        <Logger name="RequestLogger" level="info"
+                additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+    </Loggers>
+</Configuration>

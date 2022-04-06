@@ -1,0 +1,20 @@
+{
+  "ConfigurationService": {
+    "override": true,
+    "service-init-sequence": {
+      "org.grimps.service.config.internal.FileLocationPlugin" : [
+        "org.grimps.service.config.internal.plugins.SystemPropertyFileLocation",
+        "org.grimps.service.config.internal.plugins.ConfigurationFileLocationPlugin"
+      ],
+      "org.grimps.service.config.ConfigurationUpdatePlugin" : [
+        "org.grimps.service.config.plugins.ConfigurationManagerPluginReadOnly",
+        "com.ap.services.config.plugins.JavaResourceBasedUpdatesPlugins",
+        "com.ap.services.config.plugins.FileUpdatePlugins"
+      ],
+      "org.grimps.service.config.KeywordReplacementPlugin" : [
+        "com.ap.services.config.plugins.SystemPropertyKeywordReplacement",
+         com.ap.services.config.plugins.WeblogicCredentialKeywordReplacement"
+      ]
+    }
+  }
+}

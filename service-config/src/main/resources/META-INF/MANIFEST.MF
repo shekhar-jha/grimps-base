@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Specification-Title: Configuration Service
+Specification-Vendor: grimps
+Specification-Version: @@release.version@@
+Implementation-Title: Configuration Service Implementation
+Implementation-Vendor: grimps
+Implementation-Vendor-Id: org.grimps.service.config
+Implementation-Version: @@release.version@@

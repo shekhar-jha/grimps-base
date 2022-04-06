@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Specification-Title: Service Manager
+Specification-Vendor: grimps
+Specification-Version: @@release.version@@
+Implementation-Title: Service Manager Implementation
+Implementation-Vendor: grimps
+Implementation-Vendor-Id: org.grimps.services
+Implementation-Version: @@release.version@@
